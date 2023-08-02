@@ -116,6 +116,12 @@ topMenuEl.addEventListener("click", (el) =>{
       showingSubMenu = false;
       submenuEl.style.top = 0;
     }
+
+    if(el.target.textContent){
+      mainEl.innerHTML = `<h1>${el.target.textContent}</h1>`
+    }
+  
+
  })
 
 // Task 5.8
@@ -151,12 +157,7 @@ submenuEl.addEventListener('click',(evt) =>{
   showingSubMenu = false;
   submenuEl.style.top = 0;
 
-  if(evt.target.textContent === 'ABOUT'){
-    mainEl.innerHTML = '<h1>about</h1>'
-  }else{
+  if(evt.target.textContent){
     mainEl.innerHTML = `<h1>${evt.target.textContent}</h1>`
   }
-
 })
-
-// I was unable to get the last part done Task 6.4 If the ABOUT link is clicked, an <h1>about</h1>should be displayed.
